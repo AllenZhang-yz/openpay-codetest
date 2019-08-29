@@ -1,0 +1,13 @@
+{
+  "payments": [
+    { "date": "10th of January", "paymentCount": "2", "interval": "weekly" },
+    { "date": "11th of Feburary", "paymentCount": "3", "interval": "weekly" },
+    { "date": "12th of March", "paymentCount": "4", "interval": "weekly" },
+    { "date": "13th of April", "paymentCount": "5", "interval": "fortnightly" },
+    { "date": "14th of May", "paymentCount": "6", "interval": "fortnightly" },
+    { "date": "15th of June", "paymentCount": "7", "interval": "fortnightly" },
+    { "date": "16th of July", "paymentCount": "8", "interval": "monthly" },
+    { "date": "17th of August", "paymentCount": "9", "interval": "monthly" },
+    { "date": "18th of September", "paymentCount": "10", "interval": "monthly" }
+  ]
+}

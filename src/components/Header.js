@@ -7,7 +7,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ced5d4;
+  background-color: #f1f7f8;
 `;
 
 const ImgLogo = styled.img`

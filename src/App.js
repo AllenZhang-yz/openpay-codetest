@@ -8,9 +8,9 @@ import PlansTab from "./components/PlansTab";
 const Main = styled.div`
   width: 400px;
   height: 600px;
-  border: 1px solid #8b8d8d;
+  border: 1px solid #dddddd;
   margin: 0 auto;
-  background-color: #eef8fa;
+  background-color: #d5e7f6;
 `;
 
 class App extends Component {

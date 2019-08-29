@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Route, Link } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 import Payments from "./Payments/Payments";
 
 const Ul = styled.ul`
@@ -10,25 +10,26 @@ const Ul = styled.ul`
   padding: 0;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: #ced5d4;
-  &:hover,
-  :active {
+  color: #a5a6a7;
+  &.active {
     text-decoration: underline;
-    color: #2fc1dd;
+    color: #1589e7;
   }
 `;
 
-const PlansTab = props => (
+const plansTab = props => (
   <div>
     <nav>
       <Ul>
         <li>
-          <StyledLink to="/">Weekly</StyledLink>
+          <StyledLink to="/" exact>
+            Weekly
+          </StyledLink>
         </li>
         <li>
           <StyledLink to="/fortnightly">Fortnightly</StyledLink>
@@ -47,4 +48,4 @@ const PlansTab = props => (
   </div>
 );
 
-export default PlansTab;
+export default plansTab;
