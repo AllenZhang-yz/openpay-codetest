@@ -22,7 +22,6 @@ class Payments extends Component {
             id: Math.random()
           };
         });
-        console.log(updatedPayments);
         this.setState({ loading: false, payments: updatedPayments });
       })
       .catch(err => {
