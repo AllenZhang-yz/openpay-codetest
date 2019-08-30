@@ -7,21 +7,33 @@ class Payments extends Component {
   state = {
     payments: [],
     loading: true,
-    error: false
+    error: false,
+    selected: null
   };
 
   componentDidMount() {
     axios
       .get("https://openpay-d1151.firebaseio.com/payments.json")
       .then(res => {
-        const fetchedData = res.data;
-        this.setState({ loading: false, payments: fetchedData });
+        // Add Id to the data before passing into state
+        const updatedPayments = res.data.map(payment => {
+          return {
+            ...payment,
+            id: Math.random()
+          };
+        });
+        console.log(updatedPayments);
+        this.setState({ loading: false, payments: updatedPayments });
       })
       .catch(err => {
         console.log(err);
         this.setState({ loading: false, error: true });
       });
   }
+
+  choosePayment = id => {
+    this.setState({ selected: id });
+  };
 
   render() {
     let payments = <p style={{ textAlign: "center" }}>Something went wrong!</p>;
@@ -33,10 +45,12 @@ class Payments extends Component {
         .filter(payment => payment.interval === this.props.interval)
         .map(payment => (
           <Payment
-            key={Math.random()}
+            key={payment.id}
             interval={this.props.interval}
             date={payment.date}
             paymentCount={payment.paymentCount}
+            selected={this.state.selected === payment.id}
+            choosePayment={() => this.choosePayment(payment.id)}
           />
         ));
     }

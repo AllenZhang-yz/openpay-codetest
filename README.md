@@ -17,10 +17,17 @@ You can visit the website of this project on:https://openpay-d1151.firebaseapp.c
 1. Open with VS Code or any IDE
 2. npm run test
 
+### Functionality of this App
+
+1. Choose payments interval from the UI.
+2. After interval is chosen, payment plans are loaded from remote API.
+3. The amount of each payment is calculated accordingly.
+4. Users can tick which payment plan they prefer.
+
 ### Process of finishing this project
 
-Breakdown the page into components -> Finish the static version -> Test -> Add state locally -> Test -> Move state to remote firebase API -> Test
+Breakdown the page into decoupled components -> Finish the static version -> Test -> Add state locally -> Test -> Move state to remote firebase API -> Test
 
 ### Skills used in this project
 
-React React-Router ContextAPI axios JSON Jest Enzyme Firebase
+React React-Router ContextAPI PropTypes axios JSON Jest Enzyme Firebase
