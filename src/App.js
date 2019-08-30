@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { BrowserRouter } from "react-router-dom";
-import Header from "./components/Header";
-import CustomisePlanTitle from "./components/CustomisePlanTitle";
-import PlansTab from "./components/PlansTab";
+import Header from "./components/Header/Header";
+import CustomisePlanTitle from "./components/CustomisePlanTitle/CustomisePlanTitle";
+import PlansTab from "./components/PlansTab/PlansTab";
 
 const Main = styled.div`
   width: 400px;

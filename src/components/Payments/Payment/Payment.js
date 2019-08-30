@@ -8,7 +8,7 @@ const Payment = styled.div`
   margin: 2px auto;
   background-color: #fff;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  /* padding: 0 15px; */
+  cursor: pointer;
 `;
 
 const P1 = styled.p`
@@ -24,7 +24,7 @@ const P2 = styled.p`
 `;
 
 const payment = props => (
-  <Payment>
+  <Payment onClick={(e, key) => console.log(e, key)}>
     <P1>Finishes {props.date}</P1>
     <P2>
       {props.paymentCount} x $27.50 &#46; {props.interval} &#46; inc fee

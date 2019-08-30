@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../img/openpay-logo.png";
-import shoppingcart from "../img/shoppingcart-logo.png";
+import logo from "../../img/openpay-logo.png";
+import shoppingcart from "../../img/shoppingcart-logo.png";
 
 const Header = styled.div`
   display: flex;

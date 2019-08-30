@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Route, NavLink } from "react-router-dom";
-import Payments from "./Payments/Payments";
+import { Route, NavLink, Switch } from "react-router-dom";
+import Payments from "../Payments/Payments";
 
 const Ul = styled.ul`
   list-style: none;
@@ -39,12 +39,14 @@ const plansTab = props => (
         </li>
       </Ul>
     </nav>
-    <Route path="/" exact render={() => <Payments interval="weekly" />} />
-    <Route
-      path="/fortnightly"
-      render={() => <Payments interval="fortnightly" />}
-    />
-    <Route path="/monthly" render={() => <Payments interval="monthly" />} />
+    <Switch>
+      <Route path="/" exact render={() => <Payments interval="weekly" />} />
+      <Route
+        path="/fortnightly"
+        render={() => <Payments interval="fortnightly" />}
+      />
+      <Route path="/monthly" render={() => <Payments interval="monthly" />} />
+    </Switch>
   </div>
 );
 
