@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Payment from "./Payment/Payment";
-import Spinner from "../UI/Spinner/Spinner";
+import Payment from "./Payment";
+import Spinner from "../UI/Spinner";
 
 class Payments extends Component {
   state = {

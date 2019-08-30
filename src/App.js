@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { BrowserRouter } from "react-router-dom";
-import Header from "./components/Header/Header";
-import CustomisePlanTitle from "./components/CustomisePlanTitle/CustomisePlanTitle";
-import PlansTab from "./components/PlansTab/PlansTab";
+import Header from "./components/Header";
+import CustomisePlanTitle from "./components/CustomisePlanTitle";
+import PlansTab from "./components/PlansTab";
+import PurchasePriceContext from "./context/purcasePrice-context";
 
 const Main = styled.div`
   width: 400px;
@@ -14,13 +15,20 @@ const Main = styled.div`
 `;
 
 class App extends Component {
+  state = {
+    purchasePrice: 123.45
+  };
   render() {
     return (
       <BrowserRouter>
         <Main>
-          <Header />
+          <Header purchasePrice={this.state.purchasePrice} />
           <CustomisePlanTitle />
-          <PlansTab />
+          <PurchasePriceContext.Provider
+            value={{ purchasePrice: this.state.purchasePrice }}
+          >
+            <PlansTab />
+          </PurchasePriceContext.Provider>
         </Main>
       </BrowserRouter>
     );

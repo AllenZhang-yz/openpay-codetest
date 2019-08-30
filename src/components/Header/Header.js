@@ -34,7 +34,7 @@ const header = props => (
     </div>
     <ShoppingCart>
       <ImgCart src={shoppingcart} alt="shoppingcart" />
-      <p>$123.45</p>
+      <p>${props.purchasePrice}</p>
     </ShoppingCart>
   </Header>
 );

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Route, NavLink, Switch } from "react-router-dom";
-import Payments from "../Payments/Payments";
+import Payments from "../Payments";
 
 const Ul = styled.ul`
   list-style: none;
