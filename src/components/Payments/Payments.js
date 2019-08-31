@@ -15,7 +15,6 @@ class Payments extends Component {
     axios
       .get("https://openpay-d1151.firebaseio.com/payments.json")
       .then(res => {
-        // Add Id to the data before passing into state
         const updatedPayments = res.data.map(payment => {
           return {
             ...payment,

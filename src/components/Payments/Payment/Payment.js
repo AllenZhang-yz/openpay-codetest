@@ -9,7 +9,6 @@ const PaymentList = styled.div`
   border: 1px solid #ced5d4;
   margin: 2px auto;
   background-color: #fff;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   cursor: pointer;
   display: flex;
   justify-content: space-between;

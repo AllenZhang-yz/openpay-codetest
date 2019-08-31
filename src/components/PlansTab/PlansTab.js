@@ -12,7 +12,6 @@ const Ul = styled.ul`
 
 const StyledLink = styled(NavLink)`
   text-decoration: none;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: #a5a6a7;

@@ -4,11 +4,9 @@ import styled from "styled-components";
 const Back = styled.div`
   margin: 20px;
   font-weight: bold;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 `;
 
 const Title = styled.div`
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 22px;
   font-weight: bold;
   margin: 20px;
