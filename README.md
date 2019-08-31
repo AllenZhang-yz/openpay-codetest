@@ -26,7 +26,7 @@ You can visit the website of this project on:https://openpay-d1151.firebaseapp.c
 
 ### Process of finishing this project
 
-Breakdown the page into decoupled components -> Finish the static version -> Test -> Add state locally -> Test -> Move state to remote firebase API -> Test
+Breakdown the page into decoupled components -> Finish the static version -> Test -> Add state locally -> Test -> Get state from remote firebase API asynchronously -> Test
 
 ### Skills used in this project
 
