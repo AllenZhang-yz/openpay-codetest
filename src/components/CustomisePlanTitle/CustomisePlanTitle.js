@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 
 const Back = styled.div`
@@ -14,10 +14,10 @@ const Title = styled.div`
 `;
 
 const customisePlanTitle = props => (
-  <div>
+  <Fragment>
     <Back>&#60; Back</Back>
     <Title>Customise your plan</Title>
-  </div>
+  </Fragment>
 );
 
 export default customisePlanTitle;

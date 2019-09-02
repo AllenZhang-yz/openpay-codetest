@@ -9,6 +9,6 @@ describe("CustomisePlanTitle", () => {
   it("It should render 3 divs without errors", () => {
     const component = mount(<CustomisePlanTitle />);
     const wrapper = component.find("div");
-    expect(wrapper.length).toBe(3);
+    expect(wrapper.length).toBe(2);
   });
 });
