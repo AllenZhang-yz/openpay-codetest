@@ -9,12 +9,20 @@ Enzyme.configure({ adapter: new Adapter() });
 describe("Payment", () => {
   let component;
   beforeEach(() => {
-    component = mount(<Payment />);
+    component = mount(<Payment />, { context: { purchasePrice: 300 } });
   });
 
   it("It should render 2 ps without errors", () => {
     const wrapper = component.find("p");
     expect(wrapper.length).toBe(2);
+  });
+
+  it("It should render date correctly", () => {
+    component.setProps({ date: "10th of Jan" });
+    const wrapper = component.containsMatchingElement(
+      <p>Finishes 10th of Jan</p>
+    );
+    expect(wrapper).toEqual(true);
   });
 
   it("It should render <Checked /> when selected", () => {
