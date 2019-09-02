@@ -18,7 +18,7 @@ class Payments extends Component {
         const updatedPayments = res.data.map(payment => {
           return {
             ...payment,
-            id: Math.random()
+            id: Math.random().toString()
           };
         });
         this.setState({ loading: false, payments: updatedPayments });
