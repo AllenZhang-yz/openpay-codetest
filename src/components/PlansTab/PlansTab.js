@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Route, NavLink, Switch } from "react-router-dom";
+import { Route, NavLink, Switch, Redirect } from "react-router-dom";
 import Payments from "../Payments";
 
 const Ul = styled.ul`
@@ -26,9 +26,7 @@ const plansTab = props => (
     <nav>
       <Ul>
         <li>
-          <StyledLink to="/" exact>
-            Weekly
-          </StyledLink>
+          <StyledLink to="/weekly">Weekly</StyledLink>
         </li>
         <li>
           <StyledLink to="/fortnightly">Fortnightly</StyledLink>
@@ -39,12 +37,13 @@ const plansTab = props => (
       </Ul>
     </nav>
     <Switch>
-      <Route path="/" exact render={() => <Payments interval="weekly" />} />
+      <Route path="/weekly" render={() => <Payments interval="weekly" />} />
       <Route
         path="/fortnightly"
         render={() => <Payments interval="fortnightly" />}
       />
       <Route path="/monthly" render={() => <Payments interval="monthly" />} />
+      <Redirect from="/" to="/weekly" />
     </Switch>
   </div>
 );
