@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, { mount } from "enzyme";
+import Enzyme, { mount, shallow } from "enzyme";
 import Payment from "./Payment";
 import Adapter from "enzyme-adapter-react-16";
 import Checked from "../../UI/Checked";
@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe("Payment", () => {
   let component;
   beforeEach(() => {
-    component = mount(<Payment />, { context: { purchasePrice: 300 } });
+    component = mount(<Payment />);
   });
 
   it("It should render 2 ps without errors", () => {
